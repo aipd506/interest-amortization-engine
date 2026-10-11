@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "interest-amortization-engine"
+version = "0.1.0"
+description = "Actuarial Loan Amortization, Day-Count Conventions, and APR/APY Engine"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "aipd506"}
+]
+keywords = ["banking", "lending", "mortgage", "amortization", "apr", "apy", "daycount", "actuarial", "finance", "regulation-z"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Financial and Insurance Industry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Office/Business :: Financial",
+]
+
+[project.scripts]
+amortize = "interest_amortization_engine.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["interest_amortization_engine*"]
